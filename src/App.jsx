@@ -11,6 +11,8 @@ const data = [
 		hard: '500 GB',
 		user: '2',
 		bandwidth: '3',
+		color2: '#fff',
+		color: '#6D72DE',
 	},
 	{
 		text: 'Professional',
@@ -22,8 +24,8 @@ const data = [
 		user: '5',
 		bandwidth: '10',
 		className: 'gard',
-		color3: '#6D72DE',
-		ntf: '#ca2d2d',
+		color2: '#6D72DE',
+		color: '#fff',
 	},
 	{
 		text: 'Master',
@@ -34,6 +36,8 @@ const data = [
 		hard: '2 TB',
 		user: '10',
 		bandwidth: '20',
+		color2: '#fff',
+		color: '#6D72DE',
 	},
 ]
 function App() {
@@ -63,7 +67,7 @@ function App() {
 					<p className="lab">Monthly</p>
 				</div>
 			</div>
-			<div className="flex flex-col md:flex-row gap-6 md:gap-0 z-10">
+			<div className="flex flex-col lg:flex-row gap-6 md:gap-0 z-10">
 				{data.map(item => (
 					<Card
 						key={item.text}
@@ -72,8 +76,6 @@ function App() {
 						user={item.user}
 						color={item.color}
 						color2={item.color2}
-						color3={item.color3}
-						color7={item.color7}
 						bandwidth={item.bandwidth}
 						className={item.className}
 						price={toggle ? item.price.monthly : item.price.annually}
